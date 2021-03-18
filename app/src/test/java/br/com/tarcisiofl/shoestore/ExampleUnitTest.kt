@@ -1,4 +1,4 @@
-package com.udacity.shoestore
+package br.com.tarcisiofl.shoestore
 
 import org.junit.Test
 

@@ -7,7 +7,7 @@ android {
     compileSdkVersion 30
     buildToolsVersion "29.0.1"
     defaultConfig {
-        applicationId "com.udacity.shoestore"
+        applicationId "br.com.tarcisiofl.shoestore"
         minSdkVersion 22
         targetSdkVersion 30
         versionCode 1

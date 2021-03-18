@@ -1,4 +1,4 @@
-package com.udacity.shoestore
+package br.com.tarcisiofl.shoestore
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
