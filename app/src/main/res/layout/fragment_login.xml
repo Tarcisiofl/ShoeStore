@@ -3,24 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="loginViewModel"
+            type="br.com.tarcisiofl.shoestore.ui.login.LoginViewModel" />
+    </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/loginPageBackgroundColor"
         tools:context=".LoginActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/logo_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:adjustViewBounds="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/logo_shoestore" />
+                app:shapeAppearance="@style/Widget.Store.CircleImageView"
+                app:srcCompat="@drawable/logo_shoestore"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="3dp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email_text"
@@ -52,7 +64,6 @@
                 android:layout_marginTop="@dimen/small_margin"
                 android:layout_marginEnd="@dimen/big_margin"
                 android:hint="@string/password"
-                app:errorEnabled="true"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/email_text"
                 app:passwordToggleEnabled="true">
@@ -69,9 +80,11 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/login_button"
+                style="@style/Widget.Store.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/small_margin"
+                android:onClick="@{() -> loginViewModel.onLogin()}"
                 android:text="@string/login"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -79,7 +92,6 @@
 
             <TextView
                 android:id="@+id/no_account_text"
-                style="@style/Widget.Store.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/big_margin"
@@ -95,6 +107,7 @@
                 style="@style/Widget.Store.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="@{() -> loginViewModel.onCreateAccount()}"
                 android:text="@string/create_your_account"
                 android:textColor="@color/colorPrimaryDark"
                 app:layout_constraintBottom_toTopOf="@+id/no_account_text"
