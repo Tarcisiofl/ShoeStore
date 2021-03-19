@@ -16,4 +16,8 @@
         android:id="@+id/welcomeFragment"
         android:name="br.com.tarcisiofl.shoestore.ui.welcome.WelcomeFragment"
         android:label="WelcomeFragment" />
+    <fragment
+        android:id="@+id/instructionFragment"
+        android:name="br.com.tarcisiofl.shoestore.ui.instruction.InstructionFragment"
+        android:label="InstructionFragment" />
 </navigation>

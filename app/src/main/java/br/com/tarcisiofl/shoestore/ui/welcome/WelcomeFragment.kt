@@ -19,6 +19,10 @@ class WelcomeFragment : Fragment() {
             inflater, R.layout.fragment_welcome, container, false
         )
 
+        binding.aboutButton
+        binding.showcaseButton
+        binding.contactButton
+
         return binding.root
     }
 }
