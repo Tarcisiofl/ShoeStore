@@ -28,11 +28,4 @@ class LoginViewModel : ViewModel() {
     fun createdAccount() {
         _eventCreateAccount.value = false
     }
-
-    fun isValidCredentials(email: String, password: String): Boolean {
-        if (email.isBlank() || password.isBlank()) {
-            return false
-        }
-        return true
-    }
 }

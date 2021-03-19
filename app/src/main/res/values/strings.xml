@@ -5,5 +5,6 @@
     <string name="password">Password</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="create_your_account">Create your account</string>
-    <string name="error">Please make sure all fields have been entered</string>
+    <string name="errorEmail">Please make sure email has been entered</string>
+    <string name="errorPassword">Please make sure password has been entered</string>
 </resources>

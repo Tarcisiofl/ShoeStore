@@ -43,14 +43,10 @@ class LoginFragment : Fragment() {
     }
 
     private fun onSubmit() {
-        val email = binding.emailInput.text.toString()
-        val password = binding.passwordInput.text.toString()
-
-        if (viewModel.isValidCredentials(email, password)) {
-            setErrorTextField(false)
+        if (validateEmail() && validatePassword()) {
             loggedIn()
-        } else {
-            setErrorTextField(true)
+            binding.emailInput.text = null
+            binding.passwordInput.text = null
         }
 
         viewModel.loggedIn()
@@ -73,14 +69,27 @@ class LoginFragment : Fragment() {
         viewModel.createdAccount()
     }
 
-    private fun setErrorTextField(error: Boolean) {
-        if (error) {
+    private fun validateEmail(): Boolean {
+        if (binding.emailInput.text.toString().trim().isEmpty()) {
+            binding.emailText.isErrorEnabled = true
+            binding.emailText.error = getString(R.string.errorEmail)
+            binding.emailInput.requestFocus()
+            return false
+        } else {
+            binding.emailText.isErrorEnabled = false
+        }
+        return true
+    }
+
+    private fun validatePassword(): Boolean {
+        if (binding.passwordInput.text.toString().trim().isEmpty()) {
             binding.passwordText.isErrorEnabled = true
-            binding.passwordText.error = getString(R.string.error)
+            binding.passwordText.error = getString(R.string.errorPassword)
+            binding.passwordInput.requestFocus()
+            return false
         } else {
             binding.passwordText.isErrorEnabled = false
-            binding.emailInput.text = null
-            binding.passwordInput.text = null
         }
+        return true
     }
 }
