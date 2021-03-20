@@ -6,21 +6,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/logo_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/big_margin"
-            android:src="@drawable/logo_shoestore"
+            android:adjustViewBounds="true"
             app:layout_constraintBottom_toTopOf="@+id/about_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/Widget.Store.CircleImageView"
+            app:srcCompat="@drawable/logo_shoestore"
+            app:strokeColor="?attr/colorPrimary"
+            app:strokeWidth="3dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/about_button"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/showcase_button"
             app:layout_constraintHorizontal_bias="0.5"
@@ -30,8 +34,8 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/showcase_button"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/contact_button"
             app:layout_constraintHorizontal_bias="0.5"
@@ -40,8 +44,8 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/contact_button"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"

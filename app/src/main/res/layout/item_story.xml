@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/small_margin">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/logo_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/Widget.Store.CircleImageView"
+        app:srcCompat="@drawable/logo_shoestore"
+        app:strokeColor="?attr/colorPrimary"
+        app:strokeWidth="3dp" />
+
+    <TextView
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/logo_image"
+        app:layout_constraintStart_toEndOf="@+id/logo_image"
+        app:layout_constraintTop_toBottomOf="@+id/logo_image"
+        tools:text="Vestidos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
