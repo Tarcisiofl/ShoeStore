@@ -1,9 +1,7 @@
 package br.com.tarcisiofl.shoestore.ui.products
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import br.com.tarcisiofl.shoestore.R
@@ -20,6 +18,22 @@ class ProductListFragment : Fragment() {
             inflater, R.layout.fragment_product_list, container, false
         )
 
+        setHasOptionsMenu(true)
+
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.top_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+//            R.id.search -> shareSuccess()
+//            R.id.cart -> shareSuccess()
+//            R.id.profile -> shareSuccess()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
