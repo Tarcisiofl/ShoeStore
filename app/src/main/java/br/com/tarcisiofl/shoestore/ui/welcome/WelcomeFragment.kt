@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import br.com.tarcisiofl.shoestore.R
 import br.com.tarcisiofl.shoestore.databinding.FragmentWelcomeBinding
 
@@ -19,9 +20,19 @@ class WelcomeFragment : Fragment() {
             inflater, R.layout.fragment_welcome, container, false
         )
 
-        binding.aboutButton
-        binding.showcaseButton
-        binding.contactButton
+        binding.aboutButton.setOnClickListener { view: View ->
+            view.findNavController()
+                .navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionFragment())
+        }
+        binding.showcaseButton.setOnClickListener { view: View ->
+            view.findNavController()
+                .navigate(WelcomeFragmentDirections.actionWelcomeFragmentToProductListFragment())
+        }
+
+        binding.contactButton.setOnClickListener { view: View ->
+            view.findNavController()
+                .navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionFragment())
+        }
 
         return binding.root
     }

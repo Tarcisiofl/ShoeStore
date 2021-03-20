@@ -15,9 +15,20 @@
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="br.com.tarcisiofl.shoestore.ui.welcome.WelcomeFragment"
-        android:label="WelcomeFragment" />
+        android:label="WelcomeFragment" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionFragment"
+            app:destination="@id/instructionFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_productListFragment"
+            app:destination="@id/productListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/instructionFragment"
         android:name="br.com.tarcisiofl.shoestore.ui.instruction.InstructionFragment"
         android:label="InstructionFragment" />
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="br.com.tarcisiofl.shoestore.ui.products.ProductListFragment"
+        android:label="ProductListFragment" />
 </navigation>
