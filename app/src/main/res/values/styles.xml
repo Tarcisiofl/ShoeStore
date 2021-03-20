@@ -59,5 +59,6 @@
     <style name="Widget.Store.FAB" parent="Widget.Design.FloatingActionButton">
         <item name="backgroundTint">?attr/colorPrimaryDark</item>
         <item name="borderWidth">2dp</item>
+        <item name="tint">?attr/colorPrimaryDark</item>
     </style>
 </resources>
