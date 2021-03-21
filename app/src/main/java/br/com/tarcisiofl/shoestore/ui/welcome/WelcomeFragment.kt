@@ -29,10 +29,10 @@ class WelcomeFragment : Fragment() {
                 .navigate(WelcomeFragmentDirections.actionWelcomeFragmentToProductListFragment())
         }
 
-//        binding.contactButton.setOnClickListener { view: View ->
-//            view.findNavController()
-//                .navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionFragment())
-//        }
+        binding.contactButton.setOnClickListener { view: View ->
+            view.findNavController()
+                .navigate(WelcomeFragmentDirections.actionWelcomeFragmentToContactFragment())
+        }
 
         return binding.root
     }
