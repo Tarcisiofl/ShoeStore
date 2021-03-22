@@ -5,7 +5,6 @@ import android.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import br.com.tarcisiofl.shoestore.R
-import br.com.tarcisiofl.shoestore.databinding.FragmentInstructionBinding
 import br.com.tarcisiofl.shoestore.databinding.FragmentProductListBinding
 
 class ProductListFragment : Fragment() {
@@ -25,7 +24,7 @@ class ProductListFragment : Fragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.top_menu, menu)
+        inflater.inflate(R.menu.product_list_menu, menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

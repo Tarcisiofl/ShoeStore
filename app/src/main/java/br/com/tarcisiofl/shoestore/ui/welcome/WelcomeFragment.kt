@@ -1,9 +1,8 @@
 package br.com.tarcisiofl.shoestore.ui.welcome
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -34,6 +33,20 @@ class WelcomeFragment : Fragment() {
                 .navigate(WelcomeFragmentDirections.actionWelcomeFragmentToContactFragment())
         }
 
+        setHasOptionsMenu(true)
+
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.top_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.logout -> Toast.makeText(requireContext(), "Logout", Toast.LENGTH_SHORT).show()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
