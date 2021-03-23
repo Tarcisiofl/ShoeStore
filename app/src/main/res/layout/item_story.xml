@@ -1,32 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="@dimen/small_margin">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/logo_image"
+    <ImageView
+        android:id="@+id/fav1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_favorite"
+        app:layout_constraintEnd_toStartOf="@+id/discount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearance="@style/Widget.Store.CircleImageView"
-        app:srcCompat="@drawable/logo_shoestore"
-        app:strokeColor="?attr/colorPrimary"
-        app:strokeWidth="3dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        style="@style/TextAppearance.MaterialComponents.Caption"
-        android:layout_marginTop="@dimen/small_margin"
+        android:id="@+id/discount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@+id/logo_image"
-        app:layout_constraintStart_toEndOf="@+id/logo_image"
-        app:layout_constraintTop_toBottomOf="@+id/logo_image"
-        tools:text="Vestidos" />
+        android:background="@drawable/discount_badge"
+        android:paddingLeft="7dp"
+        android:paddingTop="2dp"
+        android:paddingRight="7dp"
+        android:paddingBottom="2dp"
+        android:text="30%"
+        android:textColor="#fff"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fav1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fav1" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:maxLines="1"
+        android:text="Canvera Black Heel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image" />
+
+    <RatingBar
+        android:id="@+id/ratingbar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="true"
+        app:layout_constraintEnd_toStartOf="@+id/ratingtext"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/ratingtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="(1400)"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/ratingbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ratingbar"
+        app:layout_constraintTop_toBottomOf="@+id/ratingbar" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="R$1200"
+        app:layout_constraintEnd_toStartOf="@+id/cutprice"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingbar" />
+
+    <TextView
+        android:id="@+id/cutprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$2500"
+        android:textSize="11dp"
+        android:textStyle="italic"
+        android:layout_marginStart="@dimen/small_margin"
+        app:layout_constraintBottom_toTopOf="@+id/price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/price"
+        app:layout_constraintTop_toBottomOf="@+id/price" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

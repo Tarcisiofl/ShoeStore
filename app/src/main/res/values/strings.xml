@@ -22,9 +22,11 @@
     <string name="address_value">2932 Richards Avenue
     \nTracy, CA
     </string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="logout">Logout</string>
     <string name="favorite">Like</string>
     <string name="share">Share</string>
+    <string name="empty_list">Shoes List is Empty</string>
 </resources>

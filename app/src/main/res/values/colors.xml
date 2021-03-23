@@ -49,4 +49,7 @@
     <!--handles contrast by either dynamically coloring the nav bar handle (gesture nav) -->
     <!--or automatically applying a translucent background (3-button mode).-->
     <color name="nav_bar">@color/reply_black_900_alpha_020</color>
+
+    <color name="black_alpha_40">#66000000</color>
+    <color name="black_alpha_60">#99000000</color>
 </resources>
