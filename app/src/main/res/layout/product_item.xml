@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -20,22 +21,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
-            android:text="Nike"
             android:textAppearance="?attr/textAppearanceBody2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nike" />
 
         <TextView
             android:id="@+id/product_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
-            android:text="Canvera Black Heel"
             android:textAppearance="?attr/textAppearanceHeadline6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/product_company" />
+            app:layout_constraintTop_toBottomOf="@+id/product_company"
+            tools:text="Canvera Black Heel" />
 
         <ImageView
             android:id="@+id/product_image"
@@ -91,21 +92,21 @@
             android:paddingTop="8dp"
             android:paddingRight="12dp"
             android:paddingBottom="8dp"
-            android:text="32"
             android:textAppearance="?attr/textAppearanceSubtitle2"
             android:textColor="@color/reply_white_50"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/size_text" />
+            app:layout_constraintTop_toTopOf="@+id/size_text"
+            tools:text="32" />
 
         <TextView
-            android:textAppearance="?attr/textAppearanceHeadline5"
             android:id="@+id/price_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medium_margin"
-            android:text="R$1200"
+            android:textAppearance="?attr/textAppearanceHeadline5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/size_value" />
+            app:layout_constraintTop_toBottomOf="@+id/size_value"
+            tools:text="R$1200" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
