@@ -9,9 +9,15 @@
     <string name="errorPassword">Please make sure password has been entered</string>
     <string name="welcome">Welcome</string>
     <string name="instructions">Instructions</string>
-    <string name="product_list">Shoes</string>
+    <string name="product_list">Store</string>
     <string name="contact">Contact</string>
-    <string name="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nunc felis, suscipit vitae ipsum quis, rhoncus commodo nulla. Suspendisse sed ornare felis, et congue ligula. Donec lobortis arcu eget mi feugiat, ut posuere massa vehicula. Praesent iaculis, quam eget ornare scelerisque, velit purus hendrerit nibh, id porta nibh lacus eleifend felis. Donec non turpis tempor, dapibus elit eget, aliquam orci. Mauris quis diam eget mauris egestas faucibus. Nullam accumsan, lacus et eleifend eleifend, sem enim tincidunt enim, sed ullamcorper arcu orci eu nisl. Praesent eu volutpat enim. \n\nQuisque suscipit maximus orci nec tincidunt. Sed a ante eu risus interdum vehicula eget eget dui. Sed eget erat mollis elit suscipit rhoncus sit amet quis felis. Pellentesque viverra ac neque ultrices ultricies. Phasellus porta felis eu tristique volutpat. Etiam suscipit, enim non vehicula ornare, elit ante ultricies mauris, quis eleifend nisl nisl quis lectus. Mauris molestie euismod iaculis. Integer congue porttitor ligula consequat imperdiet. Nam cursus velit non pulvinar posuere. Pellentesque ultrices massa rhoncus ipsum lobortis, in venenatis ligula commodo. Aenean pellentesque purus ligula, et mattis quam fermentum eu. Maecenas posuere tincidunt quam, in blandit arcu blandit id. Nullam et mauris vitae velit consequat suscipit.</string>
+    <string name="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nunc
+    felis, suscipit vitae ipsum quis, rhoncus commodo nulla. Suspendisse sed ornare felis, et congue
+    ligula. Donec lobortis arcu eget mi feugiat, ut posuere massa vehicula. Praesent iaculis, quam
+    eget ornare scelerisque, velit purus hendrerit nibh, id porta nibh lacus eleifend felis. Donec
+    non turpis tempor, dapibus elit eget, aliquam orci. Mauris quis diam eget mauris egestas
+    faucibus.
+    \n\nNullam accumsan, lacus et eleifend eleifend, sem enim tincidunt enim, sed ullamcorper arcu orci eu nisl. Praesent eu volutpat enim.</string>
     <string name="search">Search</string>
     <string name="cart">Cart</string>
     <string name="profile">Profile</string>
@@ -28,4 +34,7 @@
     <string name="favorite">Like</string>
     <string name="share">Share</string>
     <string name="empty_list">Shoes List is Empty</string>
+    <string name="best_seller">Best Seller of 2021</string>
+    <string name="instruction_subtitle">Read the instructions below</string>
+    <string name="show_case">Take a look to our products</string>
 </resources>
