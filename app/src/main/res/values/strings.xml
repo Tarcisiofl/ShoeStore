@@ -25,11 +25,7 @@
     <string name="phone">Phone</string>
     <string name="email_address">shoestore@fake.com</string>
     <string name="phone_number">+1–202–555–0130</string>
-    <string name="address_value">2932 Richards Avenue - Tracy, CA
-    </string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="address_value">2932 Richards Avenue - Tracy, CA</string>
     <string name="logout">Logout</string>
     <string name="favorite">Like</string>
     <string name="share">Share</string>
@@ -37,4 +33,6 @@
     <string name="best_seller">Best Seller of 2021</string>
     <string name="instruction_subtitle">Read the instructions below</string>
     <string name="show_case">Take a look to our products</string>
+    <string name="instruction_navigation">Take a look to the instructions</string>
+    <string name="welcome_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sapien libero, auctor a ex at, varius egestas nibh. Curabitur accumsan elementum orci eu mattis. Nam non porttitor quam, quis condimentum sapien. Aliquam sit amet fermentum nisi, ac scelerisque augue.</string>
 </resources>

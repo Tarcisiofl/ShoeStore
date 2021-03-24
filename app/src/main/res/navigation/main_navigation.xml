@@ -1,35 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
     app:startDestination="@+id/loginFragment">
 
     <fragment
         android:id="@+id/loginFragment"
         android:name="br.com.tarcisiofl.shoestore.ui.login.LoginFragment"
-        android:label="@string/login">
+        android:label="@string/login"
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
             app:destination="@id/welcomeFragment" />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="br.com.tarcisiofl.shoestore.ui.welcome.WelcomeFragment"
-        android:label="@string/welcome">
+        android:name="br.com.tarcisiofl.shoestore.ui.onboarding.WelcomeFragment"
+        android:label="@string/welcome"
+        tools:layout="@layout/fragment_welcome">
         <action
             android:id="@+id/action_welcomeFragment_to_instructionFragment"
             app:destination="@id/instructionFragment" />
-        <action
-            android:id="@+id/action_welcomeFragment_to_productListFragment"
-            app:destination="@id/productListFragment" />
-        <action
-            android:id="@+id/action_welcomeFragment_to_contactFragment"
-            app:destination="@id/contactFragment" />
     </fragment>
     <fragment
         android:id="@+id/instructionFragment"
-        android:name="br.com.tarcisiofl.shoestore.ui.instruction.InstructionFragment"
-        android:label="@string/instructions">
+        android:name="br.com.tarcisiofl.shoestore.ui.onboarding.InstructionFragment"
+        android:label="@string/instructions"
+        tools:layout="@layout/fragment_instruction">
         <action
             android:id="@+id/action_instructionFragment_to_productListFragment"
             app:destination="@id/productListFragment"
@@ -39,9 +37,15 @@
     <fragment
         android:id="@+id/productListFragment"
         android:name="br.com.tarcisiofl.shoestore.ui.products.ProductListFragment"
-        android:label="@string/product_list" />
+        android:label="@string/product_list"
+        tools:layout="@layout/fragment_product_list">
+        <action
+            android:id="@+id/action_productListFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/contactFragment"
-        android:name="br.com.tarcisiofl.shoestore.ui.contact.ContactFragment"
-        android:label="@string/contact" />
+        android:id="@+id/productDetailFragment"
+        android:name="br.com.tarcisiofl.shoestore.ui.products.ProductDetailFragment"
+        android:label="ProductDetailFragment"
+        tools:layout="@layout/fragment_product_detail" />
 </navigation>

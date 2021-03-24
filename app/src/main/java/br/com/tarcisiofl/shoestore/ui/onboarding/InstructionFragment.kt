@@ -1,4 +1,4 @@
-package br.com.tarcisiofl.shoestore.ui.instruction
+package br.com.tarcisiofl.shoestore.ui.onboarding
 
 import android.os.Bundle
 import android.view.LayoutInflater

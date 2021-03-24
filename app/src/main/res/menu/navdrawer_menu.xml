@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/instructionFragment"
-        android:icon="@drawable/ic_info"
-        android:title="@string/instructions" />
-
-    <item
-        android:id="@+id/productListFragment"
-        android:icon="@drawable/ic_store"
-        android:title="@string/product_list" />
-
-    <item
-        android:id="@+id/contactFragment"
-        android:icon="@drawable/ic_contato"
-        android:title="@string/contact" />
+        android:id="@+id/loginFragment"
+        android:icon="@drawable/ic_logout"
+        android:title="@string/logout" />
 </menu>

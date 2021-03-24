@@ -6,7 +6,17 @@ import androidx.lifecycle.ViewModel
 import br.com.tarcisiofl.shoestore.models.Shoe
 
 class ProductViewModel : ViewModel() {
-    private val _listProducts = MutableLiveData<Shoe>()
-    val listProducts: LiveData<Shoe>
+    private val _listProducts = MutableLiveData<ArrayList<Shoe>>()
+    val listProducts: LiveData<ArrayList<Shoe>>
         get() = _listProducts
+
+    init {
+        _listProducts.value = arrayListOf()
+    }
+
+    fun saveProduct(shoe: Shoe) {
+        val list = _listProducts.value
+        list?.add(shoe)
+        _listProducts.value = list
+    }
 }
