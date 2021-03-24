@@ -31,7 +31,7 @@
         <action
             android:id="@+id/action_instructionFragment_to_productListFragment"
             app:destination="@id/productListFragment"
-            app:popUpTo="@id/instructionFragment"
+            app:popUpTo="@id/welcomeFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -46,6 +46,6 @@
     <fragment
         android:id="@+id/productDetailFragment"
         android:name="br.com.tarcisiofl.shoestore.ui.products.ProductDetailFragment"
-        android:label="ProductDetailFragment"
+        android:label="@string/product_details"
         tools:layout="@layout/fragment_product_detail" />
 </navigation>

@@ -25,10 +25,13 @@ class MainActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this, navController)
         navController.addOnDestinationChangedListener { nc: NavController, nd: NavDestination, _: Bundle? ->
-            if (nd.id == nc.graph.startDestination) {
-                supportActionBar?.hide()
-            } else {
-                supportActionBar?.show()
+            when (nd.id) {
+                nc.graph.startDestination -> {
+                    supportActionBar?.setDisplayHomeAsUpEnabled(false)
+                }
+                R.id.productListFragment -> {
+                    supportActionBar?.setDisplayHomeAsUpEnabled(false)
+                }
             }
         }
 
