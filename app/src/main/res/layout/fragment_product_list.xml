@@ -12,7 +12,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/small_margin"
             android:drawableStart="@drawable/ic_vitrine"
-            android:text="SIRALA"
+            android:text="Order By"
             app:layout_constraintBottom_toBottomOf="@+id/divider_view"
             app:layout_constraintEnd_toStartOf="@+id/divider_view"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/small_margin"
             android:drawablePadding="10dp"
-            android:text="FİLTRELE"
+            android:gravity="center_vertical"
+            android:text="Search"
+            android:textAppearance="?attr/textAppearanceBody2"
             app:drawableStartCompat="@drawable/ic_vitrine"
             app:layout_constraintBottom_toBottomOf="@+id/divider_view"
             app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +61,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/empty_list" />
+                    android:text="@string/empty_list"
+                    android:textAppearance="?attr/textAppearanceBody2" />
 
             </LinearLayout>
 

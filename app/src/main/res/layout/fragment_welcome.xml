@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.material.imageview.ShapeableImageView
+        <ImageView
             android:id="@+id/logo_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -16,74 +16,87 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearance="@style/Widget.Store.CircleImageView"
-            app:srcCompat="@drawable/logo_shoestore"
-            app:strokeColor="?attr/colorPrimary"
-            app:strokeWidth="3dp" />
+            app:srcCompat="@drawable/logo_shoestore" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/welcome"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_image" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/about_button"
-            style="@style/Widget.Store.FAB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/white"
             android:src="@drawable/ic_store"
+            app:fabCustomSize="100dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/showcase_button"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logo_image" />
+            app:layout_constraintTop_toBottomOf="@+id/logo_image"
+            app:maxImageSize="48dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/showcase_button"
-            style="@style/Widget.Store.FAB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/white"
             android:src="@drawable/ic_vitrine"
+            app:fabCustomSize="100dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/contact_button"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/about_button"
-            app:layout_constraintTop_toBottomOf="@+id/logo_image" />
+            app:layout_constraintTop_toBottomOf="@+id/logo_image"
+            app:maxImageSize="48dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/contact_button"
-            style="@style/Widget.Store.FAB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/white"
             android:src="@drawable/ic_contato"
+            app:fabCustomSize="100dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/showcase_button"
-            app:layout_constraintTop_toBottomOf="@+id/logo_image" />
+            app:layout_constraintTop_toBottomOf="@+id/logo_image"
+            app:maxImageSize="48dp" />
 
         <TextView
-            style="@style/TextAppearance.MaterialComponents.Caption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
             android:text="@string/instructions"
+            android:textAppearance="?attr/textAppearanceBody1"
             app:layout_constraintEnd_toEndOf="@+id/about_button"
             app:layout_constraintStart_toStartOf="@+id/about_button"
             app:layout_constraintTop_toBottomOf="@+id/about_button" />
 
         <TextView
-            style="@style/TextAppearance.MaterialComponents.Caption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
             android:text="@string/product_list"
+            android:textAppearance="?attr/textAppearanceBody1"
             app:layout_constraintEnd_toEndOf="@+id/showcase_button"
             app:layout_constraintStart_toStartOf="@+id/showcase_button"
             app:layout_constraintTop_toBottomOf="@+id/showcase_button" />
 
         <TextView
-            style="@style/TextAppearance.MaterialComponents.Caption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
             android:text="@string/contact"
+            android:textAppearance="?attr/textAppearanceBody1"
             app:layout_constraintEnd_toEndOf="@+id/contact_button"
             app:layout_constraintStart_toStartOf="@+id/contact_button"
             app:layout_constraintTop_toBottomOf="@+id/contact_button" />

@@ -13,14 +13,13 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/loginPageBackgroundColor"
         tools:context=".LoginActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <ImageView
                 android:id="@+id/logo_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -29,14 +28,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:shapeAppearance="@style/Widget.Store.CircleImageView"
-                app:srcCompat="@drawable/logo_shoestore"
-                app:strokeColor="?attr/colorPrimary"
-                app:strokeWidth="3dp" />
+                app:srcCompat="@drawable/logo_shoestore" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email_text"
-                style="@style/Widget.Store.TextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/big_margin"
@@ -57,7 +53,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/password_text"
-                style="@style/Widget.Store.TextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/big_margin"
@@ -78,9 +74,9 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/login_button"
-                style="@style/Widget.Store.Button"
+                style="@style/Widget.MaterialComponents.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/small_margin"
@@ -102,14 +98,13 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/login_button" />
 
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/create_account_button"
-                style="@style/Widget.Store.Button.TextButton"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="@{() -> loginViewModel.onCreateAccount()}"
                 android:text="@string/create_your_account"
-                android:textColor="@color/colorPrimaryDark"
                 app:layout_constraintBottom_toTopOf="@+id/no_account_text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
