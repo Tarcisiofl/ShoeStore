@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/app_name"
                 android:textAppearance="?attr/textAppearanceHeadline6"
-                android:textColor="@color/material_on_surface_emphasis_high_type" />
+                android:textColor="@color/reply_white_50" />
 
             <TextView
                 android:id="@+id/navigation_drawer_account_information_email"
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/email_address"
                 android:textAppearance="?attr/textAppearanceBody2"
-                android:textColor="@color/material_on_surface_emphasis_medium" />
+                android:textColor="@color/reply_white_50" />
 
         </LinearLayout>
 
