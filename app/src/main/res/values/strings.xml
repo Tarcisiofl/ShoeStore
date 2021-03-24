@@ -36,4 +36,6 @@
     <string name="instruction_navigation">Take a look to the instructions</string>
     <string name="welcome_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sapien libero, auctor a ex at, varius egestas nibh. Curabitur accumsan elementum orci eu mattis. Nam non porttitor quam, quis condimentum sapien. Aliquam sit amet fermentum nisi, ac scelerisque augue.</string>
     <string name="product_details">Product Details</string>
+    <string name="product_description">This low-heeled hook-and-eye sandal is made from dark turquoise denim.  It has a sleek appearance.  It is accented with beads and a large bow.</string>
+    <string name="size_label">Size</string>
 </resources>
