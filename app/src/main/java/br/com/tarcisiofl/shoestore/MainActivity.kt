@@ -30,9 +30,9 @@ class MainActivity : AppCompatActivity() {
             } else {
                 supportActionBar?.show()
             }
-            drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
         }
 
+        drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
         appBarConfiguration = AppBarConfiguration(navController.graph)
     }
 

@@ -19,21 +19,6 @@ class ProductDetailFragment : Fragment() {
             inflater, R.layout.fragment_product_detail, container, false
         )
 
-        setHasOptionsMenu(true)
-
         return binding.root
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.product_details_menu, menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.share -> Toast.makeText(requireContext(), "Share", Toast.LENGTH_SHORT).show()
-            R.id.favorite -> Toast.makeText(requireContext(), "Favorite", Toast.LENGTH_SHORT).show()
-        }
-        return super.onOptionsItemSelected(item)
     }
 }
