@@ -38,6 +38,7 @@
     <string name="product_details">Product Details</string>
     <string name="product_description">This low-heeled hook-and-eye sandal is made from dark turquoise denim.  It has a sleek appearance.  It is accented with beads and a large bow.</string>
     <string name="size_label">Size</string>
+    <string name="shoe_size_format">%.1f</string>
     <string name="shoe_name">Shoe Name</string>
     <string name="brand_name">Brand Name</string>
     <string name="product_description_label">Description</string>

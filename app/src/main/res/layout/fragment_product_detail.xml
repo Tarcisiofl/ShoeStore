@@ -40,6 +40,7 @@
                 android:hint="@string/shoe_name"
                 android:minHeight="@dimen/min_touch_target_size"
                 android:paddingVertical="@dimen/grid_1"
+                android:text="@={shoe.name}"
                 android:textAppearance="?attr/textAppearanceHeadline5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -66,6 +67,7 @@
                 android:hint="@string/brand_name"
                 android:minHeight="@dimen/min_touch_target_size"
                 android:paddingVertical="@dimen/grid_1"
+                android:text="@={shoe.company}"
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -90,8 +92,10 @@
                 android:layout_marginHorizontal="@dimen/grid_2"
                 android:background="@android:color/transparent"
                 android:hint="@string/size_label"
+                android:inputType="number"
                 android:minHeight="@dimen/min_touch_target_size"
                 android:paddingVertical="@dimen/grid_1"
+                android:text="@={shoe.size}"
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -111,7 +115,6 @@
 
             <EditText
                 android:id="@+id/body_text_view"
-                paddingBottomSystemWindowInsets="@{true}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/grid_2"
@@ -121,6 +124,7 @@
                 android:hint="@string/product_description_label"
                 android:minHeight="250dp"
                 android:paddingBottom="@dimen/grid_4"
+                android:text="@={shoe.description}"
                 android:textAppearance="?attr/textAppearanceBody1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -135,11 +139,11 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/button"
+                app:layout_constraintStart_toEndOf="@+id/cancel_button"
                 app:layout_constraintTop_toBottomOf="@+id/body_text_view" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/cancel_button"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

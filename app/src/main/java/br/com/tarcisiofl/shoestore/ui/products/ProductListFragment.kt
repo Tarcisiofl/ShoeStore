@@ -2,7 +2,11 @@ package br.com.tarcisiofl.shoestore.ui.products
 
 import android.os.Bundle
 import android.view.*
+import android.widget.EditText
+import android.widget.TextView
+import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
+import androidx.databinding.InverseBindingAdapter
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
