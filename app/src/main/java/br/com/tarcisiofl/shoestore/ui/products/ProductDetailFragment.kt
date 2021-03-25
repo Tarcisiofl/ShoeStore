@@ -10,19 +10,27 @@ import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.InverseBindingAdapter
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import br.com.tarcisiofl.shoestore.R
 import br.com.tarcisiofl.shoestore.databinding.FragmentProductDetailBinding
 
 class ProductDetailFragment : Fragment() {
 
+    private lateinit var viewModel: ProductViewModel
+    private lateinit var binding: FragmentProductDetailBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentProductDetailBinding>(
+        binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_product_detail, container, false
         )
+
+        viewModel = ViewModelProvider(this).get(ProductViewModel::class.java)
+        binding.productViewModel = viewModel
+        binding.lifecycleOwner = this
 
         binding.cancelButton.setOnClickListener { view: View ->
             view.findNavController().navigateUp()

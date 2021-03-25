@@ -5,8 +5,8 @@
     <data>
 
         <variable
-            name="shoe"
-            type="br.com.tarcisiofl.shoestore.models.Shoe" />
+            name="productViewModel"
+            type="br.com.tarcisiofl.shoestore.ui.products.ProductViewModel" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -40,7 +40,7 @@
                 android:hint="@string/shoe_name"
                 android:minHeight="@dimen/min_touch_target_size"
                 android:paddingVertical="@dimen/grid_1"
-                android:text="@={shoe.name}"
+                android:text="@={productViewModel.productItem.name}"
                 android:textAppearance="?attr/textAppearanceHeadline5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -67,7 +67,7 @@
                 android:hint="@string/brand_name"
                 android:minHeight="@dimen/min_touch_target_size"
                 android:paddingVertical="@dimen/grid_1"
-                android:text="@={shoe.company}"
+                android:text="@={productViewModel.productItem.company}"
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -95,7 +95,7 @@
                 android:inputType="number"
                 android:minHeight="@dimen/min_touch_target_size"
                 android:paddingVertical="@dimen/grid_1"
-                android:text="@={shoe.size}"
+                android:text="@={productViewModel.productItem.size}"
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -124,7 +124,7 @@
                 android:hint="@string/product_description_label"
                 android:minHeight="250dp"
                 android:paddingBottom="@dimen/grid_4"
-                android:text="@={shoe.description}"
+                android:text="@={productViewModel.productItem.description}"
                 android:textAppearance="?attr/textAppearanceBody1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -135,6 +135,7 @@
                 android:id="@+id/save_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="@{() -> productViewModel.saveProduct()}"
                 android:text="@string/save_text"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
