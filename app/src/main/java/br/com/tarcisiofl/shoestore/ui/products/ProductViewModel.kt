@@ -16,6 +16,7 @@ class ProductViewModel : ViewModel() {
 
     init {
         _listProducts.value = mutableListOf()
+        _productItem.value = Shoe("", 0.0, "", "")
     }
 
     fun saveProduct() {
@@ -24,5 +25,14 @@ class ProductViewModel : ViewModel() {
             list?.add(it)
         }
         _listProducts.value = list
+    }
+
+    fun resetProduct() {
+        _productItem.value?.let {
+            it.name = ""
+            it.company = ""
+            it.size = 0.0
+            it.description = ""
+        }
     }
 }

@@ -2,14 +2,10 @@ package br.com.tarcisiofl.shoestore.ui.products
 
 import android.os.Bundle
 import android.view.*
-import android.widget.EditText
-import android.widget.TextView
-import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
-import androidx.databinding.InverseBindingAdapter
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import br.com.tarcisiofl.shoestore.R
@@ -18,7 +14,7 @@ import br.com.tarcisiofl.shoestore.databinding.ProductItemBinding
 
 class ProductListFragment : Fragment() {
 
-    private lateinit var viewModel: ProductViewModel
+    private val sharedViewModel: ProductViewModel by activityViewModels()
     private lateinit var binding: FragmentProductListBinding
 
     override fun onCreateView(
@@ -29,16 +25,15 @@ class ProductListFragment : Fragment() {
             inflater, R.layout.fragment_product_list, container, false
         )
 
-        viewModel = ViewModelProvider(this).get(ProductViewModel::class.java)
-
-        viewModel.listProducts.observe(viewLifecycleOwner, Observer { products ->
+        sharedViewModel.listProducts.observe(viewLifecycleOwner, Observer { products ->
             if (products.size > 0)
                 binding.productsViewgroup.removeAllViews()
+
             products.forEach { product ->
-                val inflater = LayoutInflater.from(binding.productsViewgroup.context)
-                val binding: ProductItemBinding =
-                    ProductItemBinding.inflate(inflater, binding.productsViewgroup, true)
-                binding.shoe = product
+                val itemBinding: ProductItemBinding =
+                    DataBindingUtil.inflate(inflater, R.layout.product_item, container, false)
+                itemBinding.shoe = product
+                binding.productsViewgroup.addView(itemBinding.root)
             }
         })
 

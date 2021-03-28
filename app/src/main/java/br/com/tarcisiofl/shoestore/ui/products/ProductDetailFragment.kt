@@ -10,14 +10,15 @@ import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.InverseBindingAdapter
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import br.com.tarcisiofl.shoestore.R
 import br.com.tarcisiofl.shoestore.databinding.FragmentProductDetailBinding
 
 class ProductDetailFragment : Fragment() {
 
-    private lateinit var viewModel: ProductViewModel
+    private val sharedViewModel: ProductViewModel by activityViewModels()
     private lateinit var binding: FragmentProductDetailBinding
 
     override fun onCreateView(
@@ -28,11 +29,11 @@ class ProductDetailFragment : Fragment() {
             inflater, R.layout.fragment_product_detail, container, false
         )
 
-        viewModel = ViewModelProvider(this).get(ProductViewModel::class.java)
-        binding.productViewModel = viewModel
-        binding.lifecycleOwner = this
+        binding.productViewModel = sharedViewModel
+        binding.lifecycleOwner = viewLifecycleOwner
 
         binding.cancelButton.setOnClickListener { view: View ->
+            sharedViewModel.resetProduct()
             view.findNavController().navigateUp()
         }
 
