@@ -61,6 +61,7 @@ class ProductDetailFragment : Fragment() {
         if (binding.shoeNameEditText.text.toString().trim().isEmpty()) {
             binding.shoeNameLabel.isErrorEnabled = true
             binding.shoeNameLabel.error = getString(R.string.errorShoeName)
+            binding.shoeNameEditText.requestFocus()
             return false
         } else {
             binding.shoeNameLabel.isErrorEnabled = false
@@ -72,6 +73,7 @@ class ProductDetailFragment : Fragment() {
         if (binding.brandEditText.text.toString().trim().isEmpty()) {
             binding.brandNameLabel.isErrorEnabled = true
             binding.brandNameLabel.error = getString(R.string.errorBrandName)
+            binding.brandEditText.requestFocus()
             return false
         } else {
             binding.brandNameLabel.isErrorEnabled = false
@@ -85,6 +87,7 @@ class ProductDetailFragment : Fragment() {
         ) {
             binding.sizeLabel.isErrorEnabled = true
             binding.sizeLabel.error = getString(R.string.errorSize)
+            binding.sizeEditText.requestFocus()
             return false
         } else {
             binding.sizeLabel.isErrorEnabled = false
@@ -93,9 +96,10 @@ class ProductDetailFragment : Fragment() {
     }
 
     private fun validateDescription(): Boolean {
-        if (binding.descriptionText.text.toString().trim().isEmpty()) {
+        if (binding.descriptionEditText.text.toString().trim().isEmpty()) {
             binding.descriptionLabel.isErrorEnabled = true
             binding.descriptionLabel.error = getString(R.string.errorDescription)
+            binding.descriptionEditText.requestFocus()
             return false
         } else {
             binding.descriptionLabel.isErrorEnabled = false

@@ -28,8 +28,12 @@ class ProductViewModel : ViewModel() {
 
     fun saveProduct(shoe: Shoe) {
         onSaveShoe()
-        val list = _listProducts.value
-        list?.add(shoe)
-        _listProducts.value = list
+        if (!(shoe.name.trim().isEmpty() || shoe.company.trim()
+                .isEmpty() || shoe.size == 0.0 || shoe.description.trim().isEmpty())
+        ) {
+            val list = _listProducts.value
+            list?.add(shoe)
+            _listProducts.value = list
+        }
     }
 }

@@ -27,7 +27,7 @@ class LoginFragment : Fragment() {
 
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
         binding.loginViewModel = viewModel
-        binding.lifecycleOwner = this
+        binding.lifecycleOwner = viewLifecycleOwner
 
         viewModel.eventLogin.observe(viewLifecycleOwner, Observer { hasLoggedIn ->
             if (hasLoggedIn)
