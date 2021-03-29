@@ -13,8 +13,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import br.com.tarcisiofl.shoestore.R
 import br.com.tarcisiofl.shoestore.databinding.FragmentProductDetailBinding
+import br.com.tarcisiofl.shoestore.models.Shoe
 
 class ProductDetailFragment : Fragment() {
 
@@ -29,11 +31,19 @@ class ProductDetailFragment : Fragment() {
             inflater, R.layout.fragment_product_detail, container, false
         )
 
+        binding.shoe = Shoe("", 0.0, "", "")
         binding.productViewModel = sharedViewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
+        sharedViewModel.eventSave.observe(viewLifecycleOwner, Observer { hasSaved ->
+            if (hasSaved) {
+                sharedViewModel.savedShoe()
+                NavHostFragment.findNavController(this).navigateUp()
+            }
+        })
+
         binding.cancelButton.setOnClickListener { view: View ->
-            sharedViewModel.resetProduct()
+            sharedViewModel.savedShoe()
             view.findNavController().navigateUp()
         }
 

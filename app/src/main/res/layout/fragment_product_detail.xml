@@ -5,6 +5,10 @@
     <data>
 
         <variable
+            name="shoe"
+            type="br.com.tarcisiofl.shoestore.models.Shoe" />
+
+        <variable
             name="productViewModel"
             type="br.com.tarcisiofl.shoestore.ui.products.ProductViewModel" />
     </data>
@@ -47,7 +51,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:text="@={productViewModel.productItem.name}"
+                    android:text="@={shoe.name}"
                     android:textAppearance="?attr/textAppearanceHeadline5" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -80,7 +84,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:text="@={productViewModel.productItem.company}"
+                    android:text="@={shoe.company}"
                     android:textAppearance="?attr/textAppearanceHeadline6" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -114,7 +118,7 @@
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
                     android:inputType="numberDecimal"
-                    android:text="@={productViewModel.productItem.size}"
+                    android:text="@={shoe.size}"
                     android:textAppearance="?attr/textAppearanceHeadline6" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -149,7 +153,7 @@
                     android:background="@android:color/transparent"
                     android:gravity="start"
                     android:minLines="6"
-                    android:text="@={productViewModel.productItem.description}"
+                    android:text="@={shoe.description}"
                     android:textAppearance="?attr/textAppearanceBody1"
                     app:lineHeight="24sp" />
 
@@ -159,7 +163,7 @@
                 android:id="@+id/save_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="@{() -> productViewModel.saveProduct()}"
+                android:onClick="@{() -> productViewModel.saveProduct(shoe)}"
                 android:text="@string/save_text"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
