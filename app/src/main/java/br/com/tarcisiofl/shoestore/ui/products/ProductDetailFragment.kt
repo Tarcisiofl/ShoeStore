@@ -35,10 +35,9 @@ class ProductDetailFragment : Fragment() {
         binding.productViewModel = sharedViewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-        sharedViewModel.eventSave.observe(viewLifecycleOwner, Observer { hasSaved ->
-            if (hasSaved) {
-                sharedViewModel.savedShoe()
-                NavHostFragment.findNavController(this).navigateUp()
+        sharedViewModel.eventSave.observe(viewLifecycleOwner, Observer { isSaving ->
+            if (isSaving) {
+                onSaving()
             }
         })
 
@@ -48,6 +47,60 @@ class ProductDetailFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    private fun onSaving() {
+        if (validateShoeName() && validateBrandName() && validateSize() && validateDescription()) {
+            NavHostFragment.findNavController(this).navigateUp()
+        }
+
+        sharedViewModel.savedShoe()
+    }
+
+    private fun validateShoeName(): Boolean {
+        if (binding.shoeNameEditText.text.toString().trim().isEmpty()) {
+            binding.shoeNameLabel.isErrorEnabled = true
+            binding.shoeNameLabel.error = getString(R.string.errorShoeName)
+            return false
+        } else {
+            binding.shoeNameLabel.isErrorEnabled = false
+        }
+        return true
+    }
+
+    private fun validateBrandName(): Boolean {
+        if (binding.brandEditText.text.toString().trim().isEmpty()) {
+            binding.brandNameLabel.isErrorEnabled = true
+            binding.brandNameLabel.error = getString(R.string.errorBrandName)
+            return false
+        } else {
+            binding.brandNameLabel.isErrorEnabled = false
+        }
+        return true
+    }
+
+    private fun validateSize(): Boolean {
+        if (binding.sizeEditText.text.toString().trim()
+                .isEmpty() || binding.sizeEditText.text.toString().trim() == "0.0"
+        ) {
+            binding.sizeLabel.isErrorEnabled = true
+            binding.sizeLabel.error = getString(R.string.errorSize)
+            return false
+        } else {
+            binding.sizeLabel.isErrorEnabled = false
+        }
+        return true
+    }
+
+    private fun validateDescription(): Boolean {
+        if (binding.descriptionText.text.toString().trim().isEmpty()) {
+            binding.descriptionLabel.isErrorEnabled = true
+            binding.descriptionLabel.error = getString(R.string.errorDescription)
+            return false
+        } else {
+            binding.descriptionLabel.isErrorEnabled = false
+        }
+        return true
     }
 }
 

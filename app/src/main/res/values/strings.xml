@@ -45,4 +45,8 @@
     <string name="add_shoe">Add Shoe</string>
     <string name="cancel_text">Cancel</string>
     <string name="save_text">Save</string>
+    <string name="errorShoeName">Please make sure a shoe name has been entered</string>
+    <string name="errorBrandName">Please make sure a brand name has been entered</string>
+    <string name="errorSize">Please make sure a valid size has been entered</string>
+    <string name="errorDescription">Please make sure a description has been entered</string>
 </resources>
