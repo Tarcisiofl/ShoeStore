@@ -8,6 +8,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!--        I decide to use the Constraint Layout because it allows me    -->
+        <!--        a flexible and easy way to center the elements on the screen  -->
+        <!--        without needing nesting of layouts.                           -->
+
         <ImageView
             android:id="@+id/logo_image"
             android:layout_width="wrap_content"

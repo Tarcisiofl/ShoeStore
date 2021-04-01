@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="br.com.tarcisiofl.shoestore.ui.onboarding.InstructionFragment">
 
+    <!--    I decided to use Constraint Layout because it allows me to make      -->
+    <!--    large and complex layouts without nesting layouts.                   -->
+    <!--    Also, it provides me an easier control over each elements position.  -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

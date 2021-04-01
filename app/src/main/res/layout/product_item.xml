@@ -10,6 +10,11 @@
             type="br.com.tarcisiofl.shoestore.models.Shoe" />
     </data>
 
+    <!--    I decided to use a CardView followed by a Constraint Layout          -->
+    <!--    due to the fact that the content displaying could be heterogeneous.  -->
+    <!--    Also, the Constraint Layout gives me more flexibility to position    -->
+    <!--    the elements.                                                        -->
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

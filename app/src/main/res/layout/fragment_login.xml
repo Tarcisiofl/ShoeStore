@@ -11,6 +11,11 @@
             type="br.com.tarcisiofl.shoestore.ui.login.LoginViewModel" />
     </data>
 
+    <!--    I decided to use a Scroll View followed by a Constraint Layout.    -->
+    <!--    The Scroll View for not having the screen cropped on small screen  -->
+    <!--    devices and the Constraint Layout to be able to better place the   -->
+    <!--    buttons at the desired position.                                   -->
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
