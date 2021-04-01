@@ -49,4 +49,6 @@
     <string name="errorBrandName">Please make sure a brand name has been entered</string>
     <string name="errorSize">Please make sure a valid size has been entered</string>
     <string name="errorDescription">Please make sure a description has been entered</string>
+    <string name="add_product">Add Product</string>
+    <string name="product_image">Product Image</string>
 </resources>
